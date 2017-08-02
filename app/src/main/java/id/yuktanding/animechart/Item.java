@@ -9,8 +9,8 @@ import android.widget.ImageView;
  */
 
 public class Item implements Parcelable{
-    private String judulAnime,  sinopsisAnime;
-    private int imgAnime, ratingAnime;
+    private String judulAnime,  sinopsisAnime, imgAnime;
+    private int ratingAnime;
 
     public String getJudulAnime() {
         return judulAnime;
@@ -36,12 +36,33 @@ public class Item implements Parcelable{
         this.sinopsisAnime = sinopsisAnime;
     }
 
-    public int getImgAnime() {
+    public String getImgAnime() {
         return imgAnime;
     }
 
-    public void setImgAnime(int imgAnime) {
+    public void setImgAnime(String imgAnime) {
         this.imgAnime = imgAnime;
+    }
+
+    public Item(String judulAnime, int ratingAnime, String sinopsisAnime, String imgAnime) {
+        this.judulAnime = judulAnime;
+        this.ratingAnime = ratingAnime;
+        this.sinopsisAnime = sinopsisAnime;
+        this.imgAnime = imgAnime;
+    }
+
+    public static Creator<Item> getCREATOR() {
+        return CREATOR;
+    }
+
+    public Item(String judulAnime, String sinopsisAnime, String imgAnime, int ratingAnime) {
+        this.judulAnime = judulAnime;
+        this.sinopsisAnime = sinopsisAnime;
+        this.imgAnime = imgAnime;
+        this.ratingAnime = ratingAnime;
+    }
+
+    public Item() {
     }
 
     @Override
@@ -49,29 +70,19 @@ public class Item implements Parcelable{
         return 0;
     }
 
-    public Item(String judulAnime, int ratingAnime, String sinopsisAnime, int imgAnime) {
-        this.judulAnime = judulAnime;
-        this.ratingAnime = ratingAnime;
-        this.sinopsisAnime = sinopsisAnime;
-        this.imgAnime = imgAnime;
-    }
-
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.judulAnime);
-        dest.writeInt(this.ratingAnime);
         dest.writeString(this.sinopsisAnime);
-        dest.writeInt(this.imgAnime);
-    }
-
-    public Item() {
+        dest.writeString(this.imgAnime);
+        dest.writeInt(this.ratingAnime);
     }
 
     protected Item(Parcel in) {
         this.judulAnime = in.readString();
-        this.ratingAnime = in.readInt();
         this.sinopsisAnime = in.readString();
-        this.imgAnime = in.readInt();
+        this.imgAnime = in.readString();
+        this.ratingAnime = in.readInt();
     }
 
     public static final Creator<Item> CREATOR = new Creator<Item>() {
