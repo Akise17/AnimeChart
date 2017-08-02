@@ -49,9 +49,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     @Override
     public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
-        holder.txtJudul.setText(items.getJudulAnime());
-        holder.txtSinopsis.setText(items.getSinopsisAnime());
-        holder.txtRating.setText(items.getRatingAnime());
+
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
     }
@@ -69,6 +67,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     public class MyViewHolder extends RecyclerView.ViewHolder{
         TextView txtJudul,txtSinopsis,txtRating;
         ImageView IMG;
+
         public MyViewHolder(View view){
             super(view);
             txtJudul = (TextView) view.findViewById(R.id.txt_judulAnime);
