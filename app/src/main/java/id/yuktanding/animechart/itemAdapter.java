@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 /*  1. Buat Class ItemAdapter*/
 
 /*  2. extends RecyclerView.Adapter<NamaAdapter.NamaViewHolder>*/
-public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyviewHolder>
+public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
 {
     private static final String TAG = "Android Debug";
     public static final String JUDUL = "JUDUL";
@@ -29,11 +30,19 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyviewHolder>
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
     private ArrayList<Item> items;
     private Context context;
+    /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
 
 
+    /*  4. Buat Constructor Adapter*/
     @Override
-    public itemAdapter.MyviewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        // fungsi inflate => buat objek view baru ngambil data dari parent
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+
+
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -51,7 +60,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyviewHolder>
         this.context = context;
     }
 
-    public class MyviewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public MyViewHolder(View view){
             super(view);
