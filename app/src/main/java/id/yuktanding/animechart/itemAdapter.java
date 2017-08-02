@@ -55,7 +55,12 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         holder.txtRating.setText(item2.getRatingAnime());
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
-        holder.itemView.setOnClickListener(new View());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 
