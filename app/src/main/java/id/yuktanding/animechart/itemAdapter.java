@@ -50,7 +50,6 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         final Item item2 = items.get(position);
-
         Picasso.with(context).load(item2.getImgAnime()).into(holder.IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
@@ -81,7 +80,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         public MyViewHolder(View view){
             super(view);
 
-            IMG = (ImageView) view.findViewById(R.id.Anime_Name);
+            //IMG = (ImageView) view.findViewById(R.id.);
 
         }
     }
