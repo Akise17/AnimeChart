@@ -26,6 +26,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     public static final String JUDUL = "JUDUL";
     public static final String SINOPSIS = "SINOPSIS";
     public static final int RATING = 0 ;
+    public static final String IMGURL = "";
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
     private ArrayList<Item> items;
@@ -46,7 +47,10 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(itemAdapter.MyviewHolder holder, int position) {
+    public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
     }
 
@@ -61,11 +65,15 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-
+        TextView txtJudul,txtSinopsis,txtRating;
+        ImageView IMG;
         public MyViewHolder(View view){
             super(view);
-            JUDUL = (TextView) view.findViewById(R.id.);
-            SINOPSIS = (TextView) view.findViewById(R.id.l);
+            txtJudul = (TextView) view.findViewById(R.id.txt_judulAnime);
+            txtSinopsis = (TextView) view.findViewById(R.id.txt_sinopsisAnime);
+            txtRating = (TextView) view.findViewById(R.id.txt_ratingAnime);
+            IMG = (ImageView) view.findViewById(R.id.img_anime);
+
         }
     }
 }
