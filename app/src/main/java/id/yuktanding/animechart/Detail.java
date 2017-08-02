@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class Detail extends AppCompatActivity {
 
     private static final String TAG = "android debug =>";
@@ -44,7 +46,7 @@ public class Detail extends AppCompatActivity {
         txtJudul.setText(item.getJudulAnime());
         txtRating.setText(""+item.getRatingAnime());
         txtSinopsis.setText(item.getSinopsisAnime());
-//        imgAnime.setImageResource(item.getImgAnime());
+        Picasso.with(this).load(item.getImgAnime()).into(imgAnime);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

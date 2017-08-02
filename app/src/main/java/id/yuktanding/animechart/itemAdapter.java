@@ -26,10 +26,6 @@ import java.util.ArrayList;
 public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
 {
     private static final String TAG = "Android Debug";
-    public static final String JUDUL = "JUDUL";
-    public static final String SINOPSIS = "SINOPSIS";
-    public static final int RATING = 0 ;
-    public static final String IMGURL = "";
 
     /*  3. Buat Variabel untuk menyimpan data dari activity utama*/
     private ArrayList<Item> items;
@@ -54,7 +50,8 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         final Item item2 = items.get(position);
-        Picasso.with(context).load("http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg").into(holder.IMG);
+
+        Picasso.with(context).load(item2.getImgAnime()).into(holder.IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +81,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         public MyViewHolder(View view){
             super(view);
 
-            //IMG = (ImageView) view.findViewById(R.id.);
+            IMG = (ImageView) view.findViewById(R.id.Anime_Name);
 
         }
     }

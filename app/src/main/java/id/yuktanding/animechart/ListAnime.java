@@ -48,7 +48,7 @@ public class ListAnime extends AppCompatActivity {
         itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
         itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
         itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
-        itemArrayList.add(new Item());
+        //itemArrayList.add(new Item());
 
         recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,GridLayoutManager.VERTICAL,false);
