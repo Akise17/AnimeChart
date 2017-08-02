@@ -55,13 +55,6 @@ public class Item implements Parcelable{
         return CREATOR;
     }
 
-    public Item(String judulAnime, String sinopsisAnime, String imgAnime, int ratingAnime) {
-        this.judulAnime = judulAnime;
-        this.sinopsisAnime = sinopsisAnime;
-        this.imgAnime = imgAnime;
-        this.ratingAnime = ratingAnime;
-    }
-
     public Item() {
     }
 

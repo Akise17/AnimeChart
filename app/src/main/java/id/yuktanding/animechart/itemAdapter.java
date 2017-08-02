@@ -84,7 +84,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         public MyViewHolder(View view){
             super(view);
 
-            IMG = (ImageView) view.findViewById(R.id.Anime_Name);
+            //IMG = (ImageView) view.findViewById(R.id.);
 
         }
     }
