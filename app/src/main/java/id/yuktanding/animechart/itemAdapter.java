@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 /**
@@ -50,9 +52,10 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
         Item item2 = items.get(position);
-        holder.txtJudul.setText(item2.getJudulAnime());
-        holder.txtSinopsis.setText(item2.getSinopsisAnime());
-        holder.txtRating.setText(item2.getRatingAnime());
+//        holder.txtJudul.setText(item2.getJudulAnime());
+//        holder.txtSinopsis.setText(item2.getSinopsisAnime());
+//        holder.txtRating.setText(item2.getRatingAnime());
+       // Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -79,10 +82,10 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         ImageView IMG;
         public MyViewHolder(View view){
             super(view);
-            txtJudul = (TextView) view.findViewById(R.id.txt_judulAnime);
-            txtSinopsis = (TextView) view.findViewById(R.id.txt_sinopsisAnime);
-            txtRating = (TextView) view.findViewById(R.id.txt_ratingAnime);
-            IMG = (ImageView) view.findViewById(R.id.img_anime);
+//            txtJudul = (TextView) view.findViewById(R.id.txt_judulAnime);
+//            txtSinopsis = (TextView) view.findViewById(R.id.txt_sinopsisAnime);
+//            txtRating = (TextView) view.findViewById(R.id.txt_ratingAnime);
+            IMG = (ImageView) view.findViewById(R.id.Anime_Name);
 
         }
     }
