@@ -13,9 +13,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class ListAnime extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    ArrayList<Item> itemArrayList;
 
     private static final String TAG = "android debug =>";
 
@@ -27,12 +30,6 @@ public class ListAnime extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Log.d(TAG,"activity detail onCreate");
 
-        recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,GridLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(gridLayoutManager);
-
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +38,22 @@ public class ListAnime extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        itemArrayList = new ArrayList<>();
+
+        recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,GridLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+
+        /*  Step Kedelapan RecyclerView: buat objek dari adapter yang telah dibuat*/
+        itemAdapter itemAdapter = new itemAdapter(itemArrayList, this);
+        /*  Step Kedelapan RecyclerView: buat objek dari adapter yang telah dibuat*/
+
+        /*  Step Kesembilan RecyclerView: Set objek adapter yang sudah dibuat*/
+        recyclerView.setAdapter(itemAdapter);
+        /*  Step Kesembilan RecyclerView: Set objek adapter yang sudah dibuat*/
+
     }
 
     @Override
