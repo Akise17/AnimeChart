@@ -49,10 +49,13 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     @Override
     public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
-        holder.txtJudul.setText(items.getJudulAnime());
-        holder.txtSinopsis.setText(items.getSinopsisAnime());
-        holder.txtRating.setText(items.getRatingAnime());
+        Item item2 = items.get(position);
+        holder.txtJudul.setText(item2.getJudulAnime());
+        holder.txtSinopsis.setText(item2.getSinopsisAnime());
+        holder.txtRating.setText(item2.getRatingAnime());
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+
+        holder.itemView.setOnClickListener(new View());
 
     }
 
