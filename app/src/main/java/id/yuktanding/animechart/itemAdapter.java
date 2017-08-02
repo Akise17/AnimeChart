@@ -54,7 +54,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         final Item item2 = items.get(position);
-        Picasso.with(context).load("http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg").into(holder.IMG);
+        Picasso.with(context).load(item2.getImgAnime()).into(holder.IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         public MyViewHolder(View view){
             super(view);
 
-            //IMG = (ImageView) view.findViewById(R.id.);
+            IMG = (ImageView) view.findViewById(R.id.Anime_Name);
 
         }
     }
