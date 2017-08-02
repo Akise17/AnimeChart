@@ -9,8 +9,8 @@ import android.widget.ImageView;
  */
 
 public class Item implements Parcelable{
-    private String judulAnime, ratingAnime, sinopsisAnime;
-    private int imgAnime;
+    private String judulAnime,  sinopsisAnime;
+    private int imgAnime, ratingAnime;
 
     public String getJudulAnime() {
         return judulAnime;
@@ -20,11 +20,11 @@ public class Item implements Parcelable{
         this.judulAnime = judulAnime;
     }
 
-    public String getRatingAnime() {
+    public int getRatingAnime() {
         return ratingAnime;
     }
 
-    public void setRatingAnime(String ratingAnime) {
+    public void setRatingAnime(int ratingAnime) {
         this.ratingAnime = ratingAnime;
     }
 
@@ -49,7 +49,7 @@ public class Item implements Parcelable{
         return 0;
     }
 
-    public Item(String judulAnime, String ratingAnime, String sinopsisAnime, int imgAnime) {
+    public Item(String judulAnime, int ratingAnime, String sinopsisAnime, int imgAnime) {
         this.judulAnime = judulAnime;
         this.ratingAnime = ratingAnime;
         this.sinopsisAnime = sinopsisAnime;
@@ -59,7 +59,7 @@ public class Item implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.judulAnime);
-        dest.writeString(this.ratingAnime);
+        dest.writeInt(this.ratingAnime);
         dest.writeString(this.sinopsisAnime);
         dest.writeInt(this.imgAnime);
     }
@@ -69,7 +69,7 @@ public class Item implements Parcelable{
 
     protected Item(Parcel in) {
         this.judulAnime = in.readString();
-        this.ratingAnime = in.readString();
+        this.ratingAnime = in.readInt();
         this.sinopsisAnime = in.readString();
         this.imgAnime = in.readInt();
     }
