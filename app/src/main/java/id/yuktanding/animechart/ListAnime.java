@@ -43,11 +43,31 @@ public class ListAnime extends AppCompatActivity {
 
         itemArrayList = new ArrayList<>();
 
-        itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
-        itemArrayList.add(new Item("Attact On Titan",8,"Perjalanan Raksaksa bugil", "https://myanimelist.cdn-dena.com/images/anime/10/47347l.jpg"));
-        itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
-        itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
-        itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut", "http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg"));
+        itemArrayList.add(new Item("One Piece",5,"Perjalanan Bajak Laut",
+                "https://assets.pinshape.com/uploads/image/file/112889/container_one-piece-keychain-3d-printing-112889.jpg"));
+        itemArrayList.add(new Item("Attact On Titan",8,"Perjalanan Raksasa bugil",
+                "https://i1.sndcdn.com/artworks-000116762804-oxayb7-t500x500.jpg"));
+        itemArrayList.add(new Item("Saikin, Imouto no Yousu ga Chotto Okashiinda ga.",5,"Perjalanan Hantu Mencari Cinta",
+                "https://i1.sndcdn.com/artworks-000133293110-vfd1nw-t500x500.jpg"));
+        itemArrayList.add(new Item("Fullmetal Alchemis",5,"Perjalanan Kaka Beradik Mecari Batu",
+                "https://i1.sndcdn.com/artworks-000113102014-fy2img-t500x500.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+        itemArrayList.add(new Item("Sword Art Online",5,"Perjalanan di Dunia Maya Berujung Nyawa",
+                "http://nerdreactor.com/wp-content/uploads/2014/08/Sword-Art-Online-Hollow-Fragment-NA-Visual-500x500_c.jpg"));
+
         //itemArrayList.add(new Item());
 
         recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
