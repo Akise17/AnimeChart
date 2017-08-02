@@ -49,6 +49,13 @@ public class Item implements Parcelable{
         return 0;
     }
 
+    public Item(String judulAnime, String ratingAnime, String sinopsisAnime, int imgAnime) {
+        this.judulAnime = judulAnime;
+        this.ratingAnime = ratingAnime;
+        this.sinopsisAnime = sinopsisAnime;
+        this.imgAnime = imgAnime;
+    }
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.judulAnime);
