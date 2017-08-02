@@ -46,7 +46,10 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(itemAdapter.MyviewHolder holder, int position) {
+    public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
+
+        // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
     }
 
@@ -65,7 +68,8 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
         public MyViewHolder(View view){
             super(view);
             JUDUL = (TextView) view.findViewById(R.id.);
-            SINOPSIS = (TextView) view.findViewById(R.id.l);
+            SINOPSIS = (TextView) view.findViewById(R.id.);
+            RATING = (TextView) view.findViewById(R.id)
         }
     }
 }
