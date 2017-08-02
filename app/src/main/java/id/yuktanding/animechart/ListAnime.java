@@ -28,7 +28,7 @@ public class ListAnime extends AppCompatActivity {
         Log.d(TAG,"activity detail onCreate");
 
         recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,3,false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,GridLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
