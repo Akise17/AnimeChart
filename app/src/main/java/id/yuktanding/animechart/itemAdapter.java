@@ -55,7 +55,7 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
 //        holder.txtJudul.setText(item2.getJudulAnime());
 //        holder.txtSinopsis.setText(item2.getSinopsisAnime());
 //        holder.txtRating.setText(item2.getRatingAnime());
-       // Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(IMG);
+        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(holder.IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
