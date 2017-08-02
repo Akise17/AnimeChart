@@ -1,6 +1,7 @@
 package id.yuktanding.animechart;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -51,17 +52,18 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     @Override
     public void onBindViewHolder(itemAdapter.MyViewHolder holder,final int position) {
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
-        Item item2 = items.get(position);
-//        holder.txtJudul.setText(item2.getJudulAnime());
-//        holder.txtSinopsis.setText(item2.getSinopsisAnime());
-//        holder.txtRating.setText(item2.getRatingAnime());
-        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(holder.IMG);
+
+        final Item item2 = items.get(position);
+        Picasso.with(context).load("http://static.bandainamcogames.eu/sites_products/onepiece/uploads/2015/12/OPBB_Share_Visual.jpg").into(holder.IMG);
         // 6. Set data Nama ViewHolder, onBindViewHolder, getItemCount
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context, Detail.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("ITM", item2); //ngirim data ke tetangga
+                context.startActivity(intent);
             }
         });
 
@@ -78,13 +80,10 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.MyViewHolder>
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView txtJudul,txtSinopsis,txtRating;
         ImageView IMG;
         public MyViewHolder(View view){
             super(view);
-//            txtJudul = (TextView) view.findViewById(R.id.txt_judulAnime);
-//            txtSinopsis = (TextView) view.findViewById(R.id.txt_sinopsisAnime);
-//            txtRating = (TextView) view.findViewById(R.id.txt_ratingAnime);
+
             IMG = (ImageView) view.findViewById(R.id.Anime_Name);
 
         }

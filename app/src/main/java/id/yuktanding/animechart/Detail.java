@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Detail extends AppCompatActivity {
 
@@ -29,6 +31,22 @@ public class Detail extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        TextView txtJudul,txtSinopsis,txtRating;
+        ImageView imgAnime;
+
+        txtJudul = (TextView) findViewById(R.id.txt_judulAnime);
+        txtSinopsis = (TextView) findViewById(R.id.txt_sinopsisAnime);
+        txtRating = (TextView) findViewById(R.id.txt_ratingAnime);
+        imgAnime = (ImageView) findViewById(R.id.img_anime);
+
+        Item item = getIntent().getParcelableExtra("ITM");
+        txtJudul.setText(item.getJudulAnime());
+        txtRating.setText(""+item.getRatingAnime());
+        txtSinopsis.setText(item.getSinopsisAnime());
+//        imgAnime.setImageResource(item.getImgAnime());
+
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
