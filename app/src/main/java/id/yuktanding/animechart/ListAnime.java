@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class ListAnime extends AppCompatActivity {
+
+    RecyclerView recyclerView;
 
     private static final String TAG = "android debug =>";
 
@@ -21,6 +26,10 @@ public class ListAnime extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Log.d(TAG,"activity detail onCreate");
+
+        recyclerView = (RecyclerView) findViewById(R.id.grid_layout);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3,3,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
