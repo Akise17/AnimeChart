@@ -98,10 +98,21 @@ public class ListAnime extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id){
+            case R.id.action_settings:
+                Log.d(TAG, "setting");
+                return true;
+            case R.id.action_faq:
+                Log.d(TAG, "FAQ");
+                return true;
+            case R.id.action_logout:
+                Log.d(TAG, "Logout");
+                return true;
+            case R.id.action_notif:
+                Log.d(TAG, "notification");
+                item.setIcon(R.drawable.ic_notifications_off);
+                return true;
+            default: break;
         }
 
         return super.onOptionsItemSelected(item);

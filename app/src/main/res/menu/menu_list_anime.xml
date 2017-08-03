@@ -8,14 +8,19 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_help"
+        android:id="@+id/action_faq"
         android:orderInCategory="2"
-        android:title="Help"
+        android:title="FAQ"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_new"
-        android:icon="@android:drawable/ic_menu_search"
-        app:showAsAction="ifRoom"
-        android:title="" />
-
+        android:id="@+id/action_logout"
+        android:orderInCategory="3"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notif"
+        android:icon="@drawable/ic_notifications"
+        android:orderInCategory="4"
+        app:showAsAction="always"
+        android:title="notification" />
 </menu>
