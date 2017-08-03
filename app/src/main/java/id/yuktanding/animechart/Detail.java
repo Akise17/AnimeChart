@@ -49,7 +49,8 @@ public class Detail extends AppCompatActivity {
         Picasso.with(this).load(item.getImgAnime()).into(imgAnime);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//untuk menampilkan item pada toolbar
+        //setSupportActionBar(toolbar);
     }
 
 }
